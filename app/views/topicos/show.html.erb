@@ -1,0 +1,12 @@
+<%= render @topico %>
+
+<% if notice.present? %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<div>
+<%= link_to "Topicos", topicos_path %>
+
+
+<%= button_to "Remover topico", @topico, method: :delete %>
+</div>

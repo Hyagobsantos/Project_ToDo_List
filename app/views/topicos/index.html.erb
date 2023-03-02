@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Topicos</h1>
+
+<% if notice.present? %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<div id="topico">
+  <% @topico.each do |t| %>
+    <%= render t %><br />
+    <p><%= link_to "show", t %></p>
+    <%= link_to "novo topico", new_topico_path %>
+  <% end %>
+</div>
+
